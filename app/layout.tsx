@@ -3,8 +3,8 @@ import { Schibsted_Grotesk, Martian_Mono, Geist } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 
-import LetterGlitch from "@/components/LetterGlitch";
 import Aurora from "@/components/Aurora";
+import NavBar from "@/components/organisms/NavBar";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -36,6 +36,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         geist.variable,
       )}
     >
+      <NavBar />
+
       <div className="absolute inset-0 top-0 z-[-1] min-h-screen">
         {/* <LetterGlitch
           glitchSpeed={50}
